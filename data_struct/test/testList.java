@@ -2,10 +2,12 @@ package data_struct.test;
 
 import data_struct.common.MyList;
 import data_struct.list.MyArrayList;
+import data_struct.list.MySingleLinkedList;
 
 public class testList {
     public static void main(String[] args) {
-        testMyArrayList();
+        //testMyArrayList();
+        testMySingleLinkedList();
     }
 
     public static void testMyList(MyList<Integer> list) {
@@ -35,6 +37,11 @@ public class testList {
 
     public static void testMyArrayList(){
         MyList<Integer> list = new MyArrayList<>();
+        testMyList(list);
+    }
+
+    public static void testMySingleLinkedList(){
+        MyList<Integer> list = new MySingleLinkedList<>();
         testMyList(list);
     }
 }
